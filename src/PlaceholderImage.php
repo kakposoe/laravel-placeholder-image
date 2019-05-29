@@ -14,6 +14,10 @@ class PlaceholderImage
             return static::get(...$args);
         }
 
+        if (in_array($name, ['keyword', 'icon'])) {
+            $mainArgs[] = array_shift($args);
+        }
+
         foreach (['width', 'height'] as $key => $measurement) {
             ${$measurement} = !empty($args[$key]) ? $args[$key] : null;
         }
@@ -39,26 +43,24 @@ class PlaceholderImage
                 'url'       => 'https://source.unsplash.com/random/'
             ],
             'picsum' => [
-                'separator' => '/',
                 'url'       => 'https://picsum.photos/'
             ],
             'loremflicker' => [
-                'separator' => '/',
                 'url'       => 'https://loremflicker.com/'
             ],
             'lorempixel' => [
-                'separator' => '/',
                 'url'       => 'http://lorempixel.com/'
             ],
             'unsplash' => [
-                'separator' => '/',
                 'url'       => 'https://unsplash.it/'
             ],
         ];
 
         $site = $urls[array_rand($urls)];
 
-        $size = static::getSize($width, $height, ['separator' => $site['separator']]);
+        $separator = isset($site['separator']) ? ['separator' => $site['separator']] : null;
+
+        $size = static::getSize($width, $height, $separator);
 
         return $site['url'] . $size;
     }
