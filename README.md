@@ -2,13 +2,6 @@
 
 [![Build Status](https://travis-ci.org/kakposoe/laravel-placeholder-image.svg?branch=master)](https://travis-ci.org/kakposoe/laravel-placeholder-image)
 [![styleci](https://styleci.io/repos/CHANGEME/shield)](https://styleci.io/repos/CHANGEME)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kakposoe/laravel-placeholder-image/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kakposoe/laravel-placeholder-image/?branch=master)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/CHANGEME/mini.png)](https://insight.sensiolabs.com/projects/CHANGEME)
-[![Coverage Status](https://coveralls.io/repos/github/kakposoe/laravel-placeholder-image/badge.svg?branch=master)](https://coveralls.io/github/kakposoe/laravel-placeholder-image?branch=master)
-
-[![Packagist](https://img.shields.io/packagist/v/kakposoe/laravel-placeholder-image.svg)](https://packagist.org/packages/kakposoe/laravel-placeholder-image)
-[![Packagist](https://poser.pugx.org/kakposoe/laravel-placeholder-image/d/total.svg)](https://packagist.org/packages/kakposoe/laravel-placeholder-image)
-[![Packagist](https://img.shields.io/packagist/l/kakposoe/laravel-placeholder-image.svg)](https://packagist.org/packages/kakposoe/laravel-placeholder-image)
 
 Package description: CHANGE ME
 

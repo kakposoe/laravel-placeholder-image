@@ -6,12 +6,12 @@ class PlaceholderImage
 {
     public function __call($name, $args)
     {
-        if ($name == 'get') {
-            return static::get(...$args);
+        if (env('APP_ENV') == 'production') {
+            return static::icon('image', '300x300');
         }
 
-        if (in_array($name, ['keyword', 'icon'])) {
-            $mainArgs[] = array_shift($args);
+        if ($name == 'get') {
+            return static::get(...$args);
         }
 
         foreach (['width', 'height'] as $key => $measurement) {
