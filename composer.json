@@ -1,0 +1,56 @@
+{
+  "name": "kakposoe/laravel-placeholder-image",
+  "description": "A laravel placeholder image",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "placeholder",
+    "image"
+  ],
+  "type": "library",
+  "authors": [
+    {
+      "name": "",
+      "email": ""
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "illuminate/support": "~5.8.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "~3.8.0",
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kakposoe\\LaravelPlaceholderImage\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Kakposoe\\LaravelPlaceholderImage\\Tests\\": "tests"
+    },
+    "files": [
+      "vendor/phpunit/phpunit/src/Framework/Assert/Functions.php"
+    ]
+  },
+  "scripts": {
+    "phpunit": "phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Kakposoe\\LaravelPlaceholderImage\\ServiceProvider"
+      ],
+      "aliases": {
+        "PlaceholderImage":"Kakposoe\\LaravelPlaceholderImage\\Facades\\LaravelPlaceholderImage"
+      }
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
