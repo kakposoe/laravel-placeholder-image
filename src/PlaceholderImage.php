@@ -112,7 +112,7 @@ class PlaceholderImage
      *
      * @return string
      */
-    protected static function measurement($size)
+    protected static function dimensions($size)
     {
         return 'https://via.placeholder.com/' . $size;
     }
@@ -174,8 +174,8 @@ class PlaceholderImage
         $separator = isset($options['separator']) ? $options['separator'] : '/';
 
         return implode($separator, [
-            'width'  => $width ?: '300',
-            'height' => $height ?: ($width ?: '300')
+            'width'  => $width ?: '600',
+            'height' => $height ?: ($width ?: '400')
         ]);
     }
 }

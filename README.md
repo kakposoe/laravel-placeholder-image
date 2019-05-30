@@ -14,17 +14,14 @@ composer require kakposoe/laravel-placeholder-image
 
 ### Register Service Provider
 
-**Note! This and next step are optional if you use laravel>=5.5 with package
-auto discovery feature.**
-
-Add service provider to `config/app.php` in `providers` section
+If you use laravel < 5.5, Add service provider to `config/app.php` in `providers` section
 ```php
-Kakposoe\LaravelPlaceholderImage\ServiceProvider::class,
+Kakposoe\LaravelViewGenerator\LaravelViewGeneratorServiceProvider::class,
 ```
 
 ### Register Facade
 
-Register package facade in `config/app.php` in `aliases` section
+If you use laravel < 5.5, register package facade in `config/app.php` in `aliases` section
 ```php
 Kakposoe\LaravelPlaceholderImage\Facades\LaravelPlaceholderImage::class,
 ```
@@ -35,19 +32,46 @@ Kakposoe\LaravelPlaceholderImage\Facades\LaravelPlaceholderImage::class,
 php artisan vendor:publish --provider="Kakposoe\LaravelPlaceholderImage\ServiceProvider" --tag="config"
 ```
 
-## Usage
+## How to use
+You can get random image links within your blade templates by adding:
 
-CHANGE ME
+```php
+{{ Placeholder::get($width = null, $height = null) }}
+```
+By default, images will be returned as a 600px x 400px image.
 
-## Security
+To change the dimensions of the image, simply add the width and height like so:
 
-If you discover any security related issues, please email 
-instead of using the issue tracker.
+```php
+{{ Placeholder::get(300, 300) }}
+```
 
-## Credits
+There are several different types of image at your disposal:
 
-- [](https://github.com/kakposoe/laravel-placeholder-image)
-- [All contributors](https://github.com/kakposoe/laravel-placeholder-image/graphs/contributors)
+### Icon image
+You are able to create a placeholder image with a font-awesome icon in the middle:
 
-This package is bootstrapped with the help of
-[melihovv/laravel-package-generator](https://github.com/melihovv/laravel-package-generator).
+```php
+<img src="{{ PlaceholderImage::icon('arrow-up') }}">
+```
+
+**Note:** By default `fa-image` will be returned.
+
+### Blurry image
+```php
+<img src="{{ PlaceholderImage::blur($width = null, $height = null) }}">
+```
+
+### Keyword search
+You can return a placeholder url based on a keyword:
+
+```php
+<img src="{{ PlaceholderImage::keyword('food') }}">
+```
+
+### Placeholder with image dimensions
+An placeholder image url which has the image dimensions can be returned using the `::dimensions()` method:
+
+```php
+<img src="{{ PlaceholderImage::dimensions($width = null, $height = null) }}">
+```
