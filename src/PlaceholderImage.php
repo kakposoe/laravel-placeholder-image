@@ -88,6 +88,8 @@ class PlaceholderImage
      */
     protected static function profile($size)
     {
+        $size = str_replace('/', 'x', $size);
+
         return 'https://source.unsplash.com/collection/1718802/' . $size;
     }
 

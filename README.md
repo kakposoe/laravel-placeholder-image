@@ -51,6 +51,13 @@ To change the dimensions of the image, simply add the `$width` and `$height` lik
 ## Other image types
 There are several different types of image at your disposal:
 
+### Profile Image
+To get a profile image placeholder:
+
+```php
+<img src="{{ PlaceholderImage::profile($width = null, $height = null) }}">
+```
+
 ### Icon image
 You are able to create a placeholder image with a font-awesome icon in the middle:
 
