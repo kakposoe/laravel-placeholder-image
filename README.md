@@ -1,7 +1,10 @@
 # Laravel Placeholder Image
+A convenient laravel facade which returns a placeholder image url.
 
-[![Build Status](https://travis-ci.org/kakposoe/laravel-placeholder-image.svg?branch=master)](https://travis-ci.org/kakposoe/laravel-placeholder-image)
-[![styleci](https://styleci.io/repos/CHANGEME/shield)](https://styleci.io/repos/CHANGEME)
+- [Installation](#installation)
+- [Register Plugin (Laravel 5.5 and below)](#register-service-provider)
+- [How to use](#how-to-use)
+- [Other image types](#other-image-types)
 
 Package description: CHANGE ME
 
@@ -46,7 +49,7 @@ To change the dimensions of the image, simply add the `$width` and `$height` lik
 {{ Placeholder::get(300, 300) }}
 ```
 
-## Different image types
+## Other image types
 There are several different types of image at your disposal:
 
 ### Icon image
