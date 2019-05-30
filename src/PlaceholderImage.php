@@ -19,7 +19,7 @@ class PlaceholderImage
         }
 
         foreach (['width', 'height'] as $key => $measurement) {
-            ${$measurement} = !empty($args[$key]) ? $args[$key] : null;
+            ${$measurement} = ! empty($args[$key]) ? $args[$key] : null;
         }
 
         $mainArgs[] = static::getSize($width, $height);
@@ -40,19 +40,19 @@ class PlaceholderImage
         $urls = [
             'unsplash_source' => [
                 'separator' => 'x',
-                'url'       => 'https://source.unsplash.com/random/'
+                'url'       => 'https://source.unsplash.com/random/',
             ],
             'picsum' => [
-                'url'       => 'https://picsum.photos/'
+                'url'       => 'https://picsum.photos/',
             ],
             'loremflicker' => [
-                'url'       => 'https://loremflicker.com/'
+                'url'       => 'https://loremflicker.com/',
             ],
             'lorempixel' => [
-                'url'       => 'http://lorempixel.com/'
+                'url'       => 'http://lorempixel.com/',
             ],
             'unsplash' => [
-                'url'       => 'https://unsplash.it/'
+                'url'       => 'https://unsplash.it/',
             ],
         ];
 
@@ -62,7 +62,7 @@ class PlaceholderImage
 
         $size = static::getSize($width, $height, $separator);
 
-        return $site['url'] . $size;
+        return $site['url'].$size;
     }
 
     /**
@@ -75,7 +75,7 @@ class PlaceholderImage
      */
     protected static function blur($size)
     {
-        return 'https://picsum.photos/' . $size . '?blur';
+        return 'https://picsum.photos/'.$size.'?blur';
     }
 
     /**
@@ -90,7 +90,7 @@ class PlaceholderImage
     {
         $size = str_replace('/', 'x', $size);
 
-        return 'https://source.unsplash.com/collection/1718802/' . $size;
+        return 'https://source.unsplash.com/collection/1718802/'.$size;
     }
 
     /**
@@ -103,7 +103,7 @@ class PlaceholderImage
      */
     protected static function landscape($size)
     {
-        return 'https://source.unsplash.com/collection/151521/' . $size;
+        return 'https://source.unsplash.com/collection/151521/'.$size;
     }
 
     /**
@@ -116,7 +116,7 @@ class PlaceholderImage
      */
     protected static function dimensions($size)
     {
-        return 'https://via.placeholder.com/' . $size;
+        return 'https://via.placeholder.com/'.$size;
     }
 
     /**
@@ -136,7 +136,7 @@ class PlaceholderImage
 
         $size = str_replace('/', 'x', $size);
 
-        return 'https://source.unsplash.com/' . $size . '?' . $keyword;
+        return 'https://source.unsplash.com/'.$size.'?'.$keyword;
     }
 
     /**
@@ -157,7 +157,7 @@ class PlaceholderImage
     }
 
     /**
-     * Get the size of the image
+     * Get the size of the image.
      *
      * @param   int|null   $width
      * @param   int|null   $height
@@ -168,8 +168,8 @@ class PlaceholderImage
     protected static function getSize(int $width = null, int $height = null, $options = [])
     {
         if (isset($options['no_size']) && $options['no_size']) {
-            if ( ! $width || (! $width && ! $height)) {
-                return null;
+            if (! $width || (! $width && ! $height)) {
+                return;
             }
         }
 
@@ -177,7 +177,7 @@ class PlaceholderImage
 
         return implode($separator, [
             'width'  => $width ?: '600',
-            'height' => $height ?: ($width ?: '400')
+            'height' => $height ?: ($width ?: '400'),
         ]);
     }
 }
