@@ -1,4 +1,6 @@
 # Laravel Placeholder Image
+[![Build Status](https://travis-ci.org/kakposoe/laravel-placeholder-image.svg?branch=master)](https://travis-ci.org/kakposoe/laravel-placeholder-image)
+[![StyleCI](https://styleci.io/repos/189258436/shield?branch=master)](https://styleci.io/repos/189258436)
 A convenient laravel facade which returns a placeholder image url.
 
 - [Installation](#installation)
