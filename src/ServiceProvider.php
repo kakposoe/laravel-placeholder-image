@@ -4,7 +4,7 @@ namespace Kakposoe\LaravelPlaceholderImage;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
-    const CONFIG_PATH = __DIR__ . '/../config/laravel-placeholder-image.php';
+    const CONFIG_PATH = __DIR__.'/../config/laravel-placeholder-image.php';
 
     public function boot()
     {

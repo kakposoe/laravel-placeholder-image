@@ -3,7 +3,7 @@
 namespace Kakposoe\LaravelPlaceholderImage\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use \Kakposoe\LaravelPlaceholderImage\PlaceholderImage;
+use Kakposoe\LaravelPlaceholderImage\PlaceholderImage;
 
 class LaravelPlaceholderImage extends Facade
 {

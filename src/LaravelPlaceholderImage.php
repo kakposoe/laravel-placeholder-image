@@ -2,5 +2,6 @@
 
 namespace Kakposoe\LaravelPlaceholderImage;
 
-class LaravelPlaceholderImage{
+class LaravelPlaceholderImage
+{
 }
