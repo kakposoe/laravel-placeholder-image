@@ -81,6 +81,7 @@ An placeholder image url which has the image dimensions can be returned using th
 <img src="{{ PlaceholderImage::dimensions($width = null, $height = null) }}">
 ```
 
-### A note about production environments
+## A note about production environments
 As these are placeholder images, it is assumed that these should not to be used within production environments.
+
 All placeholder images used in production will be replaced with an `::icon()` placeholder image, avoiding showing inappropriate images and the impression that the image could not be found.
