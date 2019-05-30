@@ -33,19 +33,20 @@ php artisan vendor:publish --provider="Kakposoe\LaravelPlaceholderImage\ServiceP
 ```
 
 ## How to use
-You can get random image links within your blade templates by adding:
+You can get a placeholder image url within your blade templates by adding:
 
 ```php
 {{ Placeholder::get($width = null, $height = null) }}
 ```
 By default, images will be returned as a 600px x 400px image.
 
-To change the dimensions of the image, simply add the width and height like so:
+To change the dimensions of the image, simply add the `$width` and `$height` like so:
 
 ```php
 {{ Placeholder::get(300, 300) }}
 ```
 
+## Different image types
 There are several different types of image at your disposal:
 
 ### Icon image
@@ -55,9 +56,11 @@ You are able to create a placeholder image with a font-awesome icon in the middl
 <img src="{{ PlaceholderImage::icon('arrow-up') }}">
 ```
 
-**Note:** By default `fa-image` will be returned.
+**Note:** By default, the `fa-image` icon will be returned.
 
 ### Blurry image
+To return a blurry image:
+
 ```php
 <img src="{{ PlaceholderImage::blur($width = null, $height = null) }}">
 ```
