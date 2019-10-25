@@ -19,14 +19,14 @@ composer require kakposoe/laravel-placeholder-image
 
 ### Register Service Provider
 
-If you use laravel < 5.5, Add service provider to `config/app.php` in `providers` section
+If you use Laravel < 5.5, Add service provider to `config/app.php` in `providers` section
 ```php
 Kakposoe\LaravelViewGenerator\LaravelViewGeneratorServiceProvider::class,
 ```
 
 ### Register Facade
 
-If you use laravel < 5.5, register package facade in `config/app.php` in `aliases` section
+If you use Laravel < 5.5, register package facade in `config/app.php` in `aliases` section
 ```php
 Kakposoe\LaravelPlaceholderImage\Facades\LaravelPlaceholderImage::class,
 ```
@@ -95,3 +95,9 @@ An placeholder image url which has the image dimensions can be returned using th
 As these are placeholder images, it is assumed that these should not to be used within production environments.
 
 All placeholder images used in production will be replaced with an `::icon()` placeholder image, avoiding showing inappropriate images and the impression that the image could not be found.
+
+## Credits
+
+- [Kelvin Akposoe][link-author]
+
+[link-author]: https://github.com/kakposoe
