@@ -2,9 +2,9 @@
 
 namespace Kakposoe\LaravelPlaceholderImage\Tests;
 
-use Orchestra\Testbench\TestCase;
-use Kakposoe\LaravelPlaceholderImage\ServiceProvider;
 use Kakposoe\LaravelPlaceholderImage\Facades\LaravelPlaceholderImage;
+use Kakposoe\LaravelPlaceholderImage\ServiceProvider;
+use Orchestra\Testbench\TestCase;
 
 class LaravelPlaceholderImageTest extends TestCase
 {
