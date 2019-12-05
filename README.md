@@ -41,14 +41,14 @@ php artisan vendor:publish --provider="Kakposoe\LaravelPlaceholderImage\ServiceP
 You can get a placeholder image url within your blade templates by adding:
 
 ```php
-{{ Placeholder::get($width = null, $height = null) }}
+{{ PlaceholderImage::get($width = null, $height = null) }}
 ```
 By default, images will be returned as a 600px x 400px image.
 
 To change the dimensions of the image, simply add the `$width` and `$height` like so:
 
 ```php
-{{ Placeholder::get(300, 300) }}
+{{ PlaceholderImage::get(300, 300) }}
 ```
 
 ## Other image types
