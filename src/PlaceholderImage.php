@@ -46,7 +46,7 @@ class PlaceholderImage
                 'url'       => 'https://picsum.photos/',
             ],
             'loremflicker' => [
-                'url'       => 'https://loremflicker.com/',
+                'url'       => 'https://loremflickr.com/',
             ],
             'lorempixel' => [
                 'url'       => 'http://lorempixel.com/',
